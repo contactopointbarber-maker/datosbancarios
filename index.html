@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Datos Bancarios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .contenedor {
+      border: 2px solid #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 360px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.6em;
+      margin-bottom: 25px;
+    }
+
+    #datos {
+      font-size: 1.2em;
+      line-height: 1.8;
+      white-space: pre-line; /* respeta saltos de línea */
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+      border-radius: 6px;
+    }
+
+    button:hover {
+      background-color: #ccc;
+    }
+
+    img {
+      display: block;
+      margin: 25px auto 0;
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>DATOS BANCARIOS</h1>
+
+    <div id="datos">
+Point Barber
+210892915
+jara.sebastianr@gmail.com
+Cuenta Vista
+1083045412
+Mercado Pago
+    </div>
+
+    <button onclick="copiarDatos()">📋 Copiar datos</button>
+
+    <img src="https://i.postimg.cc/j5gkx1s8/Point-4K-FEFB-4F16-A063-20409CC5733A.jpg" alt="Logo Point Barber">
+  </div>
+
+  <script>
+    function copiarDatos() {
+      const texto = document.getElementById('datos').innerText;
+      navigator.clipboard.writeText(texto).then(() => {
+        alert('✅ Datos copiados al portapapeles');
+      });
+    }
+  </script>
+
+</body>
+</html>
